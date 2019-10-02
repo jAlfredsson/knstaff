@@ -1,0 +1,57 @@
+node_modules/
+package-lock.json
+dist/
+*.env
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+tmp
+
+# Test report folder
+test_reports
+tests/e2e/reports
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Gulp
+#.gulpfile
+
+# SASS temp files
+.sass-cache
+
+# I18next missing files
+*.missing.json
+
+# Bower
+.bower-*/
+bower_components
+
+# Users Environment Variables
+.lock-wscript
+
+# SVN
+.svn
+
+.DS_Store
+Thumbs.db
+
+# Secret file
+config.js
+config.json
+
+# Data folder
+data
+
+# Typings definitions
+typings
+
+# IDEA
+.idea
+*.iml

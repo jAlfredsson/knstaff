@@ -1,0 +1,24 @@
+{
+  "presets" : [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    ["module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "@": "./",
+          "@client": "./client",
+          "@server": "./server",
+          "@validators": "./server/validators",
+          "@store": "./client/store",
+          "@models": "./server/models",
+          "@components": "./client/components",
+          "@pages": "./client/pages",
+          "@controllers": "./server/controllers",
+          "@config": "./server/config",
+          "@routes": "./server/routes",
+          "@middleware": "./server/middleware"
+        }
+      }]
+  ]
+}
