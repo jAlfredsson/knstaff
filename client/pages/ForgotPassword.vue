@@ -44,7 +44,7 @@
           .then(response => {
             this.toggleLoading()
             this.flash('Password reset link sent. It expires in 5 minutes.')
-            this.$router.push({path: '/auth/login', props: {sentResetLink: true}})
+            this.$router.push({path: '/login', props: {sentResetLink: true}})
           })
           .catch(error => {
             this.toggleLoading();

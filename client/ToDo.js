@@ -1,7 +1,7 @@
 /*
 TODO
 - Store jwt in array
-- Set up Github
+X Set up Github 
 - Add salt on Bcrypt
 - Fix redirection bugs
 - Set up server-side tests

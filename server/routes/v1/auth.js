@@ -10,12 +10,10 @@ import authMiddleWare from '@middleware/auth'
 const authRouter = new Router()
 
 authRouter.post('/login', loginValidator, authController.login)
-
 authRouter.post('/register', registerValidator, authController.register)
-
 authRouter.post('/email/confirm', emailConfirmValidator, authController.emailConfirm)
-
 authRouter.post('/email/resendConfirm', authMiddleWare, authController.resendEmailConfirm)
+authRouter.post('/offers', authMiddleWare, authController.offers)
 
 authRouter.post(
     '/passwords/email',

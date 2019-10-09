@@ -3,8 +3,8 @@
     :disabled="disabled"
     :type="type"
     @click="$emit('click')"
-    class="w-full mt-3 py-3 text-white rounded-sm focus:outline-none hover:bg-pink-300 text-sm"
-    :class="{'bg-pink-500': !loading, 'bg-pink-300 cursor-not-allowed': loading}"
+    class="w-full mt-3 py-3 text-white rounded-sm focus:outline-none hover:bg-kn-l2 text-sm"
+    :class="{'bg-kn-d2': !loading, 'bg-kn-d2 cursor-not-allowed': loading}"
   >
     <loader v-if="loading" />
     <span v-else>{{ label }}</span>

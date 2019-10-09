@@ -1,6 +1,7 @@
 import User from '@models/User'
 import PasswordReset from '@models/PasswordReset'
 import Bcrypt from 'bcryptjs'
+import axios from 'axios'
 
 const login = async (req, res) => {
     const { email, password } = req.body
@@ -91,7 +92,20 @@ const resendEmailConfirm = async (req, res) => {
   })
 }
 
+const offers = async (req, res) => {
+  let time = new Date().getTime()
+  // return res.status(401).json({})
+  try {
+    const gigs = await axios.post('https://script.google.com/macros/s/AKfycbzPXYMpHP3KKPP-vroYaUBav_8Px5yZ3FTAb1lOlcLfGWTt5Q/exec', {test: true})
+    console.log('time ->', (new Date().getTime() - time) / 1000);
+    return res.status(201).json([{name: gigs.data}])
+  } catch (err) {
+    return res.status(201).json([{name: 'Britney'}])
+  }
+}
+
 export default {
+    offers,
     login,
     register,
     forgotPassword,

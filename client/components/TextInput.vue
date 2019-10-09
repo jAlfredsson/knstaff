@@ -9,7 +9,7 @@
           @focus="$emit('focus')"
           @blur="$emit('blur')"
           @change="$emit('input', $event.target.value)"
-          class="w-full bg-purple-100 p-3 focus:outline-none text-purple-500 text-xs"
+          class="w-full bg-kn-l4 p-3 focus:outline-none text-black text-xs"
         >
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="container my-16 w-full mx-auto">
     <div class="max-w-sm mx-auto h-12">
-      <h2 class="text-center text-lg text-purple-500">Kom in och böga</h2>
+      <h2 class="text-center text-lg text-purple-500">Log in</h2>
       <div class="w-full bg-white shadow mt-5 rounded-sm p-8">
         <ValidationObserver ref="observer" v-slot="{ invalid, passes }">
           <form @submit.prevent="passes(login)">
@@ -41,7 +41,7 @@
 </template>
 
 <script>
- import { POST_LOGIN } from '@store/auth/actions'
+ import { AUTH_REQUEST } from '@store/auth/actions'
  import formMixin from '@client/mixins/form'
   export default {
     mixins: [formMixin],
@@ -54,13 +54,13 @@
     }),
     methods: {
      login() {
-       const self = this;
        this.toggleLoading()
-        this.$store.dispatch(POST_LOGIN, this.model)
+        this.$store.dispatch(AUTH_REQUEST, this.model)
           .then(response => {
             this.toggleLoading()
             this.flash('Sign in successful')
-            this.setAuth(response.data)
+            this.$router.push('/')
+            // this.setAuth(response.data)
           })
           .catch(error => {
             console.log('error', error)

@@ -1,21 +1,12 @@
 import Express from 'express'
-
 import Mongoose from 'mongoose'
-
 import BodyParser from 'body-parser'
-
 import config from '@config'
-
 import path from 'path'
-
 import v1Router from '@routes'
-
 import Webpack from 'webpack'
-
 import WebpackConfig from '../webpack.config'
-
 import WebpackHotMiddleware from 'webpack-hot-middleware'
-
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
 Mongoose.connect(config.databaseUrl, {

@@ -3,7 +3,7 @@ import "./styles/main.css";
 import store from "./store";
 import router from "./routes";
 import Router from "vue-router";
-import Main from "./pages/Main.vue";
+import App from "./pages/App.vue";
 import TextInput from "@components/TextInput.vue";
 import TextInputWithValidation from "@components/TextInputWithValidation.vue";
 import Button from "@components/Button.vue";
@@ -44,5 +44,5 @@ const app = new Vue({
   el: "#app",
   router,
   store,
-  render: h => h(Main)
+  render: h => h(App)
 });

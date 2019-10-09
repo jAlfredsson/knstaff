@@ -1,4 +1,4 @@
-import { SET_AUTH, UNSET_AUTH, POST_RESEND_EMAIL_CONFIRM } from "@store/auth/actions";
+import { AUTH_LOGOUT, SET_AUTH, UNSET_AUTH, POST_RESEND_EMAIL_CONFIRM } from "@store/auth/actions";
 
 export default {
   // data (){
@@ -15,23 +15,19 @@ export default {
     user() {
       return this.$store.state.auth.user;
     },
-    auth: {
-      get: function () {
-        return !!this.$store.state.auth.user;
-      },
-
-      cache: false
+    auth () {
+      return this.$store.state.auth.status === 'success';
     },
     confirmed() {
       return !!this.$store.state.auth.user.emailConfirmedAt
     }
   },
   methods: {
-    setAuth(payload) {
-      localStorage.setItem("auth", JSON.stringify(payload));
-      this.$store.commit(SET_AUTH, payload);
-      this.$router.push("/");
-      console.log('post login auth -->', this.auth);
+    logout() {
+      this.$store.dispatch(AUTH_LOGOUT)
+      .then(() => {
+        this.$router.push('/login')
+      })
     },
     unsetAuth() {
       localStorage.removeItem("auth");

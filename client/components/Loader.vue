@@ -1,3 +1,3 @@
 <template>
-  <img class="loader m-auto" src="/loading.png" />
+  <img class="loader m-auto" src="/img/loading.png" />
 </template>
