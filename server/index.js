@@ -9,6 +9,7 @@ import WebpackConfig from '../webpack.config'
 import WebpackHotMiddleware from 'webpack-hot-middleware'
 import WebpackDevMiddleware from 'webpack-dev-middleware'
 
+
 Mongoose.connect(config.databaseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
