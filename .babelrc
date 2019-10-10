@@ -1,6 +1,7 @@
 {
   "presets" : ["@babel/preset-env"],
   "plugins": [
+    "@babel/plugin-transform-runtime",
     ["module-resolver", {
         "root": ["./"],
         "alias": {
@@ -17,16 +18,6 @@
           "@routes": "./server/routes",
           "@middleware": "./server/middleware"
         }
-      }],
-      [
-      "@babel/plugin-transform-runtime",
-      {
-        "absoluteRuntime": false,
-        "corejs": false,
-        "helpers": true,
-        "regenerator": true,
-        "useESModules": false
-      }
-    ]
+      }]
   ]
 }
