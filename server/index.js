@@ -33,6 +33,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'))
 })
 
+const port = process.env.PORT || 3000;
+
 app.listen(3000, () => {
-    console.log('Server started')
+    console.log(`Server started on port ${port}`)
 })
