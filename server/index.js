@@ -1,5 +1,3 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
 import Express from 'express'
 import Mongoose from 'mongoose'
 import BodyParser from 'body-parser'

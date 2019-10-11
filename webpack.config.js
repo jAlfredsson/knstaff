@@ -1,3 +1,5 @@
+// require("core-js/stable");
+// require("regenerator-runtime/runtime");
 require("dotenv").config();
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
