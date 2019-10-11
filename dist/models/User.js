@@ -11,10 +11,6 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-require("core-js/stable");
-
-require("regenerator-runtime/runtime");
-
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
 var _bcryptjs = _interopRequireDefault(require("bcryptjs"));

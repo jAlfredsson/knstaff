@@ -2,10 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-require("core-js/stable");
-
-require("regenerator-runtime/runtime");
-
 var _express = _interopRequireDefault(require("express"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
