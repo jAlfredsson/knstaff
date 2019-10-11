@@ -1,6 +1,3 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-
 import mongoose from 'mongoose'
 import Bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
