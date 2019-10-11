@@ -10,7 +10,8 @@
     "build": "npm run build:client && npm run build:server",
     "build:server": "babel server/ --out-dir dist/ --copy-files",
     "start": "node dist/index.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "heroku-release": "npm install"
   },
   "keywords": [],
   "author": "",
